@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Movie</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css">
+</head>
+<body>
+    <h1>Result Page!!!</h1>
+    <div class="container">
+        <div class="row text-center" style="display:flex; flex-wrap:wrap;">
+            <% data.Search.forEach(function(movie){ %>
+                <div class="col-md-4 col-sm-6">
+                    <div class="card" style="width:18rem">
+                        <img src="<%= movie.Poster %> " class="card-img-top">  
+                        <div class="card-title">
+                            <h4><%= movie.Title %></h4>
+                        </div>
+                        <p>
+                            Year:<%= movie.Year%>
+                        </p>
+                    </div>  
+                </div>
+            <% }); %>
+        </div>
+    </div>
+    <div class="container text-center">
+        <a href="/" class="btn  btn-primary"> Search More</a>
+    </div>
+    
+   
+</body>
+</html>
+
+
+
+
+
+
